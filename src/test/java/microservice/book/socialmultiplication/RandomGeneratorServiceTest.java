@@ -13,6 +13,10 @@ import org.junit.Test;
 //import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.test.context.junit4.SpringRunner;
 
+import microservice.book.socialmultiplication.service.RandomGeneratorService;
+
+import microservice.book.socialmultiplication.service.impl.RandomGeneratorServiceImpl;
+
 //@RunWith(SpringRunner.class)
 //@SpringBootTest
 public class RandomGeneratorServiceTest {
@@ -21,7 +25,7 @@ public class RandomGeneratorServiceTest {
 	
 	@Before
 	 public void setUp() {
-		rndService = new RandoGeneratorServiceImpl();
+		rndService = new RandomGeneratorServiceImpl();
 		
 	
 	 }

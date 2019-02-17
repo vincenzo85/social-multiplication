@@ -1,9 +1,9 @@
 package microservice.book.socialmultiplication.test;
 
-import microservice.book.socialmultiplication.RandomGeneratorService;
 import microservice.book.socialmultiplication.model.Multiplication;
 import microservice.book.socialmultiplication.model.MultiplicationResultAttempt;
 import microservice.book.socialmultiplication.model.User;
+import microservice.book.socialmultiplication.service.RandomGeneratorService;
 import microservice.book.socialmultiplication.service.impl.MultiplicationServiceImpl;
 
 import org.junit.Before;

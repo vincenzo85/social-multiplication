@@ -4,10 +4,10 @@ package microservice.book.socialmultiplication.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import microservice.book.socialmultiplication.RandomGeneratorService;
 import microservice.book.socialmultiplication.model.Multiplication;
 import microservice.book.socialmultiplication.model.MultiplicationResultAttempt;
 import microservice.book.socialmultiplication.service.MultiplicationService;
+import microservice.book.socialmultiplication.service.RandomGeneratorService;
 
 public class MultiplicationServiceImpl implements MultiplicationService {
 

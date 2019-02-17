@@ -1,4 +1,4 @@
-package microservice.book.socialmultiplication;
+package microservice.book.socialmultiplication.service;
 
 public interface RandomGeneratorService {
 	

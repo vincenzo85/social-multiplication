@@ -1,10 +1,12 @@
-package microservice.book.socialmultiplication;
+package microservice.book.socialmultiplication.service.impl;
 
 import java.util.Random;
 
 import org.springframework.stereotype.Service;
+
+import microservice.book.socialmultiplication.service.RandomGeneratorService;
 @Service
-public class RandoGeneratorServiceImpl implements RandomGeneratorService {
+public class RandomGeneratorServiceImpl implements RandomGeneratorService {
 	final static int MINIMUM_FACTOR = 11;
 	 final static int MAXIMUM_FACTOR = 99;
 	@Override
