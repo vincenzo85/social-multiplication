@@ -2,25 +2,41 @@ package microservice.book.socialmultiplication;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
+//import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.boot.test.mock.mockito.MockBean;
+//import org.springframework.test.context.junit4.SpringRunner;
 import static org.mockito.BDDMockito.given;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 
 public class MultiplicationServiceTest {
 	
 
-	@MockBean
-	 private RandomGeneratorService randomGeneratorService;
+//	@MockBean
+//	 private RandomGeneratorService randomGeneratorService;
 	
-	@Autowired
-	 private MultiplicationServiceImpl multiplicationService;
+//	@Autowired
+//	 private MultiplicationServiceImpl multiplicationService;
+	
+	private MultiplicationServiceImpl multiplicationServiceImpl;
+	
+	@Mock
+	 private RandomGeneratorService randomGeneratorService;
+	 @Before
+	 public void setUp() {
+	 // With this call to initMocks we tell Mockito toprocess the annotations
+	 MockitoAnnotations.initMocks(this);
+	  multiplicationServiceImpl = new MultiplicationServiceImpl(randomGeneratorService);
+	 }
+	
+	
 	 @Test
 	 public void createRandomMultiplicationTest() {
 	 /* given (our mocked Random Generator service wil
@@ -28,7 +44,7 @@ public class MultiplicationServiceTest {
 		 
 		 given(randomGeneratorService.generateRandomFactor()).willReturn(50,30);
 		 
-	Multiplication mu =	 multiplicationService.createRandomMultiplication();
+	Multiplication mu =	 multiplicationServiceImpl.createRandomMultiplication();
 	 // when
 	  // then
 	

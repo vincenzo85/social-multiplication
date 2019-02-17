@@ -11,11 +11,8 @@ public class RandoGeneratorServiceImpl implements RandomGeneratorService {
 	public int generateRandomFactor() {
 		
 		return new Random().nextInt((MAXIMUM_FACTOR - MINIMUM_FACTOR) + 1) + MINIMUM_FACTOR;
-		
-		
-		
-		
-		
+
+//		 return 0;
 		
 	}
 
