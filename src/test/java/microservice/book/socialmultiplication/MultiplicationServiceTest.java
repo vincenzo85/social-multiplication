@@ -20,7 +20,7 @@ public class MultiplicationServiceTest {
 	 private RandomGeneratorService randomGeneratorService;
 	
 	@Autowired
-	 private MultiplicationService multiplicationService;
+	 private MultiplicationServiceImpl multiplicationService;
 	 @Test
 	 public void createRandomMultiplicationTest() {
 	 /* given (our mocked Random Generator service wil

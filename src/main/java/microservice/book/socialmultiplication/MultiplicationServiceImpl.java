@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MultiplicationService implements MultiplicationSerivce{
+public class MultiplicationServiceImpl implements MultiplicationSerivce{
 
 	private RandomGeneratorService rndserv;
 	
 	@Autowired
-	public MultiplicationService(RandomGeneratorService rnService) {
+	public MultiplicationServiceImpl(RandomGeneratorService rnService) {
 		this.rndserv = rnService;
 		
 		// TODO Auto-generated constructor stub
